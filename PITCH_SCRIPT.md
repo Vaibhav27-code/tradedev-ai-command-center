@@ -36,6 +36,14 @@ The one-click release pack becomes the handoff artifact for dev, QA, release, su
 
 This is not just a chatbot. It is an AI command center designed for trading software engineering. Future integrations can connect it to Git, Jira, CI/CD, logs, support tickets, and internal documentation.
 
+## 30 Second Manager Version
+
+TradeDev AI Command Center is an internal AI command center for trading platform engineering. It helps teams move from an issue report to impact analysis, test coverage, release readiness, rollback planning, and incident communication in minutes. The demo uses synthetic data, so it is safe for a hackfest, but the workflow is directly applicable to our real engineering lifecycle.
+
+## Strong Closing Line
+
+Our goal is simple: make every trading software release faster to understand, safer to validate, and easier to audit.
+
 ## Judge Q&A
 
 **Is this safe for trading software?**
