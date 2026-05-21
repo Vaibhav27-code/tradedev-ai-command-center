@@ -1,6 +1,6 @@
 # TradeDev AI Command Center
 
-An AI engineering productivity platform for trading software teams, built for **Greeksoft AI Hackfest 2026**.
+An AI engineering productivity platform for trading software teams.
 
 TradeDev AI Command Center converts scattered release notes, issue reports, logs, and SOP-style knowledge into structured engineering decisions: impact analysis, test coverage, incident RCA, release readiness, rollback planning, and a final handoff pack.
 
@@ -43,7 +43,7 @@ This prototype shows how AI can reduce that coordination cost while keeping the 
 6. Open **Knowledge Assistant** and ask: `What happens when an algo order reaches RMS?`
 7. Click **Generate release pack** and present it as the adoption hook.
 
-## Manager Pitch
+## Executive Pitch
 
 TradeDev AI Command Center is not a chatbot. It is an internal AI command center for trading platform engineering. It helps teams respond faster to production issues, plan safer releases, generate stronger regression coverage, and preserve audit-quality evidence.
 

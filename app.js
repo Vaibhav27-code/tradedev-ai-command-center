@@ -72,7 +72,7 @@ const releaseItems = [
   ["Pre-release evidence", "Attach failed payload replay, RMS bundle diff, impacted-module list, and regression results."],
   ["Go/no-go gate", "Block release until algo basket acceptance, stale-version rejection, and audit export tests pass."],
   ["Production validation", "Monitor ALGO rejection ratio, OMS retries, RMS version mismatch, and audit correlation coverage."],
-  ["Communication", "Notify support, broker success, release manager, RMS owner, and compliance technology owner."],
+  ["Communication", "Notify support, broker success, release owner, RMS owner, and compliance technology owner."],
   ["Post-release watch", "Keep 60-minute dashboard watch with affected broker and segment filters."]
 ];
 
@@ -80,7 +80,7 @@ const rollbackItems = [
   ["Rollback trigger", "Rejection rate remains above 2 percent for 10 minutes or audit correlation drops below 99 percent."],
   ["Rollback action", "Restore previous RMS rule bundle and disable algo-only version enforcement flag."],
   ["Data handling", "Preserve rejected order payload hashes, audit logs, deployment id, and validation screenshots."],
-  ["Owner sign-off", "RMS lead, OMS lead, QA lead, release manager, and compliance technology owner."]
+  ["Owner sign-off", "RMS lead, OMS lead, QA lead, release owner, and compliance technology owner."]
 ];
 
 const knowledge = [

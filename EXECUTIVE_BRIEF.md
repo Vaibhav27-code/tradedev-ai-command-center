@@ -1,4 +1,4 @@
-# Manager Brief: TradeDev AI Command Center
+# Executive Brief: TradeDev AI Command Center
 
 ## One-Line Summary
 
@@ -6,7 +6,7 @@ An AI command center that helps trading software teams move from incident or cha
 
 ## Why It Is Worth Attention
 
-Trading platforms are complex systems. A single RMS, OMS, API, or order-routing change can affect multiple teams and create production risk. Today, engineers, QA, release managers, support, and compliance technology teams often assemble the same context manually.
+Trading platforms are complex systems. A single RMS, OMS, API, or order-routing change can affect multiple teams and create production risk. Today, engineers, QA, release owners, support, and compliance technology teams often assemble the same context manually.
 
 TradeDev AI Command Center reduces that manual coordination effort and turns scattered information into structured engineering output.
 
