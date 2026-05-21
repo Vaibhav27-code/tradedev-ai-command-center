@@ -28,11 +28,11 @@
 
         <div class="story-panel">
           <p class="eyebrow">Demo Story</p>
-          <strong>Algo orders rejected after RMS update</strong>
+          <strong>NSE algo orders rejected after RMS update</strong>
           <p>
-            A broker reports intermittent rejection of automated orders after a
-            risk-management release. The command center turns scattered inputs
-            into impact, tests, release actions, and incident notes.
+            An Indian broker reports intermittent rejection of automated orders
+            after a risk-management release. The command center turns scattered
+            inputs into impact, tests, release actions, and incident notes.
           </p>
         </div>
       </aside>
@@ -55,16 +55,16 @@
               <p class="eyebrow">One business story, five AI workflows</p>
               <h3>Reduce release risk before it reaches the market.</h3>
               <p>
-                Paste a trading-platform issue or release note. The prototype
-                produces impact analysis, risk scoring, regression coverage,
-                incident explanation, and a release-ready action pack.
+                Paste an Indian capital-markets issue or release note. The
+                prototype produces impact analysis, risk scoring, regression
+                coverage, incident explanation, and a release-ready action pack.
               </p>
             </div>
             <div class="terminal-card" aria-label="Synthetic incident stream">
-              <div class="terminal-row ok">09:18:22 OMS accepted broker callback</div>
-              <div class="terminal-row warn">09:19:03 RMS rejected ALGO basket: RULE_VERSION_MISMATCH</div>
+              <div class="terminal-row ok">09:18:22 OMS accepted NSE broker callback</div>
+              <div class="terminal-row warn">09:19:03 RMS rejected NSE F&O ALGO basket: RULE_VERSION_MISMATCH</div>
               <div class="terminal-row warn">09:19:05 Audit event missing correlation id</div>
-              <div class="terminal-row ok">09:20:44 Manual equity order accepted</div>
+              <div class="terminal-row ok">09:20:44 Manual NSE equity order accepted</div>
             </div>
           </div>
 
@@ -91,6 +91,24 @@
             </div>
           </div>
 
+          <section class="panel component-panel">
+            <div class="panel-heading">
+              <p class="eyebrow">Indian trading stack awareness</p>
+              <h3>Understands product components, not just generic modules</h3>
+            </div>
+            <div class="component-grid">
+              <span>CTCL Manager</span>
+              <span>Client Communicator</span>
+              <span>Shared Memory SS</span>
+              <span>RMS</span>
+              <span>NSEInteractive 1</span>
+              <span>NSEInteractive 2</span>
+              <span>Broadcast Manager</span>
+              <span>IRIS / REST</span>
+              <span>Web Component App</span>
+            </div>
+          </section>
+
           <div class="split-layout">
             <section class="panel">
               <div class="panel-heading">
@@ -98,7 +116,7 @@
                 <h3>Why judges should care</h3>
               </div>
               <ul class="check-list">
-                <li>Fits Greeksoft's trading product context without using real customer data.</li>
+                <li>Fits Indian capital-market trading product context without using real customer data.</li>
                 <li>Shows practical AI across dev, QA, support, release, and compliance workflows.</li>
                 <li>Turns a high-pressure production incident into structured engineering actions.</li>
                 <li>Can integrate later with Git, Jira, CI/CD, logs, and internal documentation.</li>
@@ -214,10 +232,10 @@
                 <p class="eyebrow">Module 5</p>
                 <h3>Trading Domain Knowledge Assistant</h3>
               </div>
-              <label for="knowledgeQuestion">Ask about order lifecycle, RMS, release SOPs, or incident SOPs</label>
+              <label for="knowledgeQuestion">Ask about Indian order lifecycle, RMS, exchange segments, release SOPs, or incident SOPs</label>
               <input id="knowledgeQuestion" type="text" />
               <div class="prompt-row">
-                <button class="chip" data-question="What happens when an algo order reaches RMS?">RMS flow</button>
+                <button class="chip" data-question="What happens when an NSE F&O algo order reaches RMS?">RMS flow</button>
                 <button class="chip" data-question="What must a hotfix release pack contain?">Release pack</button>
                 <button class="chip" data-question="How should support explain this to a broker?">Support note</button>
               </div>

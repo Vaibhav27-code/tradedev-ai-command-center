@@ -296,6 +296,28 @@ li {
   gap: 20px;
 }
 
+.component-panel {
+  margin-bottom: 20px;
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.component-grid span {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cfdde2;
+  border-radius: 8px;
+  background: #f7fbfc;
+  color: #24424d;
+  font-weight: 800;
+  padding: 10px 12px;
+}
+
 .panel {
   padding: 22px;
 }
@@ -626,6 +648,7 @@ input:focus {
   }
 
   .metric-grid,
+  .component-grid,
   .nav {
     grid-template-columns: 1fr;
   }
