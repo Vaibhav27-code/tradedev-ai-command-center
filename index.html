@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradeDev AI Command Center</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">TD</div>
+          <div>
+            <p class="eyebrow">Greeksoft AI Hackfest 2026</p>
+            <h1>TradeDev AI</h1>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="impact">Impact Analyzer</button>
+          <button class="nav-item" data-view="tests">Test Generator</button>
+          <button class="nav-item" data-view="incident">Incident Assistant</button>
+          <button class="nav-item" data-view="release">Release Copilot</button>
+          <button class="nav-item" data-view="knowledge">Knowledge Assistant</button>
+        </nav>
+
+        <div class="story-panel">
+          <p class="eyebrow">Demo Story</p>
+          <strong>Algo orders rejected after RMS update</strong>
+          <p>
+            A broker reports intermittent rejection of automated orders after a
+            risk-management release. The command center turns scattered inputs
+            into impact, tests, release actions, and incident notes.
+          </p>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Internal engineering accelerator</p>
+            <h2>Command center for trading software teams</h2>
+          </div>
+          <div class="top-actions">
+            <button class="ghost-btn" id="loadScenarioBtn" type="button">Load winning scenario</button>
+            <button class="primary-btn" id="releasePackBtn" type="button">Generate release pack</button>
+          </div>
+        </header>
+
+        <section class="view active" id="dashboard">
+          <div class="hero-band">
+            <div class="hero-copy">
+              <p class="eyebrow">One business story, five AI workflows</p>
+              <h3>Reduce release risk before it reaches the market.</h3>
+              <p>
+                Paste a trading-platform issue or release note. The prototype
+                produces impact analysis, risk scoring, regression coverage,
+                incident explanation, and a release-ready action pack.
+              </p>
+            </div>
+            <div class="terminal-card" aria-label="Synthetic incident stream">
+              <div class="terminal-row ok">09:18:22 OMS accepted broker callback</div>
+              <div class="terminal-row warn">09:19:03 RMS rejected ALGO basket: RULE_VERSION_MISMATCH</div>
+              <div class="terminal-row warn">09:19:05 Audit event missing correlation id</div>
+              <div class="terminal-row ok">09:20:44 Manual equity order accepted</div>
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <span>Impact analysis</span>
+              <strong>2 hrs to 5 min</strong>
+              <p>Maps code changes to trading modules and owners.</p>
+            </div>
+            <div class="metric">
+              <span>Test planning</span>
+              <strong>3 hrs to 10 min</strong>
+              <p>Creates functional, negative, regression, and compliance cases.</p>
+            </div>
+            <div class="metric">
+              <span>Incident summary</span>
+              <strong>1 hr to 3 min</strong>
+              <p>Drafts RCA, customer note, and internal postmortem.</p>
+            </div>
+            <div class="metric">
+              <span>Risk posture</span>
+              <strong id="dashboardRisk">High</strong>
+              <p>Highlights go/no-go blockers before deployment.</p>
+            </div>
+          </div>
+
+          <div class="split-layout">
+            <section class="panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Business value</p>
+                <h3>Why judges should care</h3>
+              </div>
+              <ul class="check-list">
+                <li>Fits Greeksoft's trading product context without using real customer data.</li>
+                <li>Shows practical AI across dev, QA, support, release, and compliance workflows.</li>
+                <li>Turns a high-pressure production incident into structured engineering actions.</li>
+                <li>Can integrate later with Git, Jira, CI/CD, logs, and internal documentation.</li>
+              </ul>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Pitch spine</p>
+                <h3>Five-minute story</h3>
+              </div>
+              <ol class="step-list">
+                <li>Trading releases are fast, complex, and audit-sensitive.</li>
+                <li>AI can convert scattered issue data into clear engineering decisions.</li>
+                <li>Demo the algo rejection scenario end to end.</li>
+                <li>Quantify time saved and risk reduced.</li>
+                <li>Show the release pack as the adoption hook.</li>
+              </ol>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="impact">
+          <div class="module-grid">
+            <section class="panel input-panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Module 1</p>
+                <h3>Change Impact Analyzer</h3>
+              </div>
+              <label for="changeInput">Feature request, release note, or incident</label>
+              <textarea id="changeInput"></textarea>
+              <button class="primary-btn full" id="analyzeBtn" type="button">Analyze impact</button>
+            </section>
+            <section class="panel output-panel">
+              <div class="panel-heading inline">
+                <div>
+                  <p class="eyebrow">AI output</p>
+                  <h3>Impacted trading modules</h3>
+                </div>
+                <span class="risk-badge high" id="impactRiskBadge">High risk</span>
+              </div>
+              <div class="module-table" id="impactTable"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="tests">
+          <div class="panel">
+            <div class="panel-heading inline">
+              <div>
+                <p class="eyebrow">Module 2</p>
+                <h3>AI Test Case Generator</h3>
+              </div>
+              <button class="ghost-btn" id="generateTestsBtn" type="button">Generate test cases</button>
+            </div>
+            <div class="test-tabs" role="tablist" aria-label="Test categories">
+              <button class="chip active" data-test-type="functional">Functional</button>
+              <button class="chip" data-test-type="negative">Negative</button>
+              <button class="chip" data-test-type="regression">Regression</button>
+              <button class="chip" data-test-type="compliance">Compliance</button>
+            </div>
+            <div class="test-table" id="testTable"></div>
+          </div>
+        </section>
+
+        <section class="view" id="incident">
+          <div class="module-grid">
+            <section class="panel input-panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Module 3</p>
+                <h3>Incident Debug Assistant</h3>
+              </div>
+              <label for="incidentInput">Synthetic logs and broker complaint</label>
+              <textarea id="incidentInput"></textarea>
+              <button class="primary-btn full" id="debugBtn" type="button">Debug incident</button>
+            </section>
+            <section class="panel output-panel">
+              <div class="panel-heading">
+                <p class="eyebrow">AI output</p>
+                <h3>Root cause and timeline</h3>
+              </div>
+              <div class="incident-grid" id="incidentOutput"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="release">
+          <div class="split-layout">
+            <section class="panel">
+              <div class="panel-heading inline">
+                <div>
+                  <p class="eyebrow">Module 4</p>
+                  <h3>Release Readiness Copilot</h3>
+                </div>
+                <button class="ghost-btn" id="releaseBtn" type="button">Build checklist</button>
+              </div>
+              <div id="releaseChecklist"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Rollback and sign-off</p>
+                <h3>Hotfix control plan</h3>
+              </div>
+              <div id="rollbackPlan"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="knowledge">
+          <div class="module-grid">
+            <section class="panel input-panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Module 5</p>
+                <h3>Trading Domain Knowledge Assistant</h3>
+              </div>
+              <label for="knowledgeQuestion">Ask about order lifecycle, RMS, release SOPs, or incident SOPs</label>
+              <input id="knowledgeQuestion" type="text" />
+              <div class="prompt-row">
+                <button class="chip" data-question="What happens when an algo order reaches RMS?">RMS flow</button>
+                <button class="chip" data-question="What must a hotfix release pack contain?">Release pack</button>
+                <button class="chip" data-question="How should support explain this to a broker?">Support note</button>
+              </div>
+              <button class="primary-btn full" id="askBtn" type="button">Ask assistant</button>
+            </section>
+            <section class="panel output-panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Grounded answer</p>
+                <h3>Knowledge response</h3>
+              </div>
+              <div class="answer-box" id="knowledgeAnswer"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="pack-modal" id="packModal" aria-hidden="true">
+      <div class="pack-dialog" role="dialog" aria-modal="true" aria-labelledby="packTitle">
+        <div class="panel-heading inline">
+          <div>
+            <p class="eyebrow">Demo handoff artifact</p>
+            <h3 id="packTitle">Generated Release Pack</h3>
+          </div>
+          <button class="ghost-btn" id="closePackBtn" type="button">Close</button>
+        </div>
+        <pre id="releasePackPreview"></pre>
+        <div class="top-actions">
+          <button class="ghost-btn" id="copyPackBtn" type="button">Copy pack</button>
+          <button class="primary-btn" id="downloadPackBtn" type="button">Download txt</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Local runtime noise
+.DS_Store
+Thumbs.db
+
+# Optional editor folders
+.idea/
+.vscode/
+
+# Local logs
+*.log
