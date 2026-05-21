@@ -163,7 +163,7 @@ function loadScenario() {
   renderIncident();
   renderRelease();
   renderKnowledge();
-  showToast("Winning scenario loaded across all modules.");
+  showToast("Sample Indian market incident loaded across all components.");
 }
 
 function riskClass(risk) {
@@ -244,7 +244,7 @@ function buildReleasePackText() {
     "",
     `Scenario: ${scenario.title}`,
     "",
-    "Impacted modules:",
+    "Impacted components:",
     ...modules.map((module) => `- ${module.name} (${module.risk}): ${module.reason}`),
     "",
     "Must-run tests:",
